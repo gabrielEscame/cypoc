@@ -11,6 +11,15 @@ const beneficiaryInitialValue = {
   percentage: "",
 };
 
+const AlertCard = () => {
+  return (
+    <div className="cypoc__alert-card">
+      <h4>Atention</h4>
+      The percentage sum must be equal to 100%
+    </div>
+  );
+};
+
 const Beneficiary = () => {
   const [currentBeneficiary, setCurrentBeneficiary] = useState(
     beneficiaryInitialValue
@@ -47,6 +56,7 @@ const Beneficiary = () => {
   return (
     <div className="cypoc">
       <h1 className="cypoc__title">New beneficiary</h1>
+
       <Form
         handleOnChange={handleOnChange}
         handleSubmit={handleSubmit}
@@ -54,11 +64,15 @@ const Beneficiary = () => {
         isVisible={isFormVisible}
         handleClose={handleToggleModal}
       />
+
       <List beneficiaryList={beneficiaryList} />
+
       <Condition condition={!isValidStep}>
         <button className="cypoc__add" onClick={handleToggleModal}>
           Add beneficiary
         </button>
+
+        <AlertCard />
       </Condition>
 
       <button className={buttonClassNamae}>Next</button>

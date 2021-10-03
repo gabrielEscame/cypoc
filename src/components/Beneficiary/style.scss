@@ -99,9 +99,10 @@
   }
 
   &__beneficiary {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 24px;
+    padding: 24px 72px 24px 24px;
     height: 72px;
     background: #ffffff;
     box-shadow: 0px 2px 4px rgba(84, 108, 126, 0.5);
@@ -112,6 +113,13 @@
     font-size: 18px;
     line-height: 26px;
     color: #002740;
+
+    &::after {
+      content: "\00d7";
+      color: #d13630;
+      right: 24px;
+      position: absolute;
+    }
   }
 
   &__add {
@@ -138,6 +146,16 @@
       height: 20px;
       width: 20px;
     }
+  }
+
+  &__alert-card {
+    padding: 24px;
+    max-width: 343px;
+    background: #fff7e6;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 26px;
+    color: #253746;
   }
 
   &__next {
