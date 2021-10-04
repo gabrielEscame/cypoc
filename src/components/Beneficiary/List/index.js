@@ -1,6 +1,6 @@
 import Condition from "../../../helpers/Condition";
 
-const List = ({ beneficiaryList }) => {
+const List = ({ beneficiaryList, handleDelete }) => {
   const hasBeneficiaries = beneficiaryList.length > 0;
   return (
     <Condition
@@ -13,7 +13,10 @@ const List = ({ beneficiaryList }) => {
         {beneficiaryList &&
           beneficiaryList.map((beneficiary) => {
             return (
-              <div className="cypoc__beneficiary">
+              <div
+                className="cypoc__beneficiary"
+                onClick={handleDelete(beneficiary?.name)}
+              >
                 <p>{beneficiary?.name}</p>
                 <p>{beneficiary?.percentage}%</p>
               </div>

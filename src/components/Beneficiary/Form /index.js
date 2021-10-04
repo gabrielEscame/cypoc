@@ -17,7 +17,7 @@ const Form = ({
 
   return (
     <Fragment>
-      <div className={overlayClassName} />
+      <div className={overlayClassName} onClick={handleClose} />
       <form onSubmit={handleSubmit} className={formClassName}>
         <div className="cypoc__form-row">
           <label>Full name:</label>

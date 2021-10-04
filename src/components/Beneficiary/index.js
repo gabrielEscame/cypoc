@@ -44,6 +44,14 @@ const Beneficiary = () => {
     handleToggleModal();
   };
 
+  const handleDelete = (beneficiaryName) => () => {
+    const newList = beneficiaryList.filter(
+      (beneficiary) => beneficiary.name !== beneficiaryName
+    );
+
+    setBeneficiaryList(newList);
+  };
+
   const percentageValue = beneficiaryList.reduce((acc, cur) => {
     return acc + parseInt(cur.percentage);
   }, 0);
@@ -65,7 +73,7 @@ const Beneficiary = () => {
         handleClose={handleToggleModal}
       />
 
-      <List beneficiaryList={beneficiaryList} />
+      <List beneficiaryList={beneficiaryList} handleDelete={handleDelete} />
 
       <Condition condition={!isValidStep}>
         <button className="cypoc__add" onClick={handleToggleModal}>
