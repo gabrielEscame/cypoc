@@ -15,8 +15,23 @@
     "cypress:open": "cypress open"
   },
   "eslintConfig": {
+    "plugins": [
+      "cypress"
+    ],
+    "rules": {
+      "cypress/no-assigning-return-values": "error",
+      "cypress/no-unnecessary-waiting": "error",
+      "cypress/assertion-before-screenshot": "warn",
+      "cypress/no-force": "warn",
+      "cypress/no-async-tests": "error",
+      "cypress/no-pause": "error"
+    },
+    "env": {
+      "cypress/globals": true
+    },
     "extends": [
-      "react-app"
+      "react-app",
+      "plugin:cypress/recommended"
     ]
   },
   "browserslist": {
@@ -32,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^8.5.0"
+    "cypress": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1"
   }
 }
