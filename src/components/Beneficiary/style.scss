@@ -73,33 +73,33 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 56px;
+  }
 
-    label {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 20px;
-      color: #546c7e;
-      margin-bottom: 8px;
+  &__form-label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #546c7e;
+    margin-bottom: 8px;
+  }
+
+  &__form-input {
+    width: 100%;
+    max-width: 294px;
+    height: 48px;
+    border: none;
+    border-bottom: 2px solid #002740;
+    padding: 12px 8px 10px;
+
+    &:focus-visible {
+      outline: none;
     }
 
-    input {
-      width: 100%;
-      max-width: 294px;
-      height: 48px;
-      border: none;
-      border-bottom: 2px solid #002740;
-      padding: 12px 8px 10px;
-
-      &:focus-visible {
-        outline: none;
-      }
-
-      &::placeholder {
-        font-size: 18px;
-        line-height: 26px;
-        color: #253746;
-        opacity: 0.3;
-      }
+    &::placeholder {
+      font-size: 18px;
+      line-height: 26px;
+      color: #253746;
+      opacity: 0.3;
     }
   }
 

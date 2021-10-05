@@ -20,8 +20,9 @@ const Form = ({
       <div className={overlayClassName} onClick={handleClose} />
       <form onSubmit={handleSubmit} className={formClassName}>
         <div className="cypoc__form-row">
-          <label>Full name:</label>
+          <label className="cypoc__form-label">Full name:</label>
           <input
+            className="cypoc__form-input"
             onChange={handleOnChange}
             type="text"
             placeholder="Full name"
@@ -30,8 +31,9 @@ const Form = ({
           />
         </div>
         <div className="cypoc__form-row">
-          <label>Percentage:</label>
+          <label className="cypoc__form-label">Percentage:</label>
           <input
+            className="cypoc__form-input"
             onChange={handleOnChange}
             type="number"
             placeholder="100%"
