@@ -63,7 +63,7 @@ const Beneficiary = () => {
   }`;
   return (
     <div className="cypoc">
-      <h1 className="cypoc__title">New beneficiary</h1>
+      <h1 className="cypoc__title">New beneficiaries</h1>
 
       <Form
         handleOnChange={handleOnChange}
