@@ -1,4 +1,4 @@
-describe("My first test with Odi", () => {
+describe("Beneficiary flow", () => {
   it("Adding a new single beneficiary", () => {
     cy.visit("/");
 
