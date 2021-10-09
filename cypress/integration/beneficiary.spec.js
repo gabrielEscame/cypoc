@@ -40,4 +40,25 @@ describe("Beneficiary flow", () => {
 
     cy.get(".cypoc__next").should("have.class", "cypoc__next--disabled");
   });
+
+  it("Adding multiple beneficiaries", () => {
+    cy.visit("/");
+
+    cy.get(".cypoc__next").should("have.class", "cypoc__next--disabled");
+
+    cy.addBeneficiary("Gabriel Escame", "25");
+
+    cy.addBeneficiary("Marcos Toledo", "25");
+
+    cy.addBeneficiary("Rodrigo Bruno", "25");
+
+    cy.addBeneficiary("Yuri Becker", "25");
+
+    cy.get(".cypoc__add").should("not.exist");
+    cy.get(".cypoc__alert-card").should("not.exist");
+
+    cy.get(".cypoc__next").should("not.have.class", "cypoc__next--disabled");
+
+
+  })
 });
