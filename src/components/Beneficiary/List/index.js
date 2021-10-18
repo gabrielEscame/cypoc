@@ -6,7 +6,7 @@ const List = ({ beneficiaryList, handleDelete }) => {
     <Condition
       condition={hasBeneficiaries}
       elseChildren={
-        <p className="cypoc__no-beneficiary">No beneficiaries included.</p>
+        <p className="cypoc__no-beneficiary">No beneficiaries here...</p>
       }
     >
       <div className="cypoc__beneficiaries-list">
