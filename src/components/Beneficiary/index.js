@@ -77,7 +77,7 @@ const Beneficiary = () => {
 
       <Condition condition={!isValidStep}>
         <button className="cypoc__add" onClick={handleToggleModal}>
-          Add beneficiary
+          Add beneficiar
         </button>
 
         <AlertCard />
